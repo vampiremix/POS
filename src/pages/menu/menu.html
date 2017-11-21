@@ -18,26 +18,27 @@
     <ion-row set-height>
       <ion-col col-8>
         <!-- <ion-row no-padding> -->
-          <ion-row>
-            <ion-header>
-              <ion-col *ngFor="let item of ['1','2','3','4','5']">
-                {{item}}
-              </ion-col>
-            </ion-header>
-          </ion-row>
-          <ion-row>
-            <ion-col col-2 *ngFor="let item of items; let i = index" no-padding>
-              <ion-card no-padding>
-                <ion-card-content>
-                  <ion-list [dragula]='"my-bag"' [dragulaModel]='i'>
-                    <button ion-item detail-none>
-                      {{item.item}}
-                    </button>
-                  </ion-list>
-                </ion-card-content>
-              </ion-card>
+        <ion-row>
+     
+          <ion-scroll scrollX="true" scroll-height>
+            <ion-col *ngFor="let item of ['1','2','3','4','5']" text-center>
+              {{item}}
             </ion-col>
-          </ion-row>
+          </ion-scroll>
+        </ion-row>
+        <ion-row>
+          <ion-col col-2 *ngFor="let item of items; let i = index" no-padding>
+            <ion-card no-padding>
+              <ion-card-content>
+                <ion-list [dragula]='"my-bag"' [dragulaModel]='i'>
+                  <button ion-item detail-none>
+                    {{item.item}}
+                  </button>
+                </ion-list>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
 
         <!-- </ion-row> -->
       </ion-col>
