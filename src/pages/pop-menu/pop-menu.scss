@@ -1,0 +1,20 @@
+page-pop-menu {
+    [pop-icon] {
+        height: 6em;
+        width: auto;
+    }
+ [font-i]{
+     margin-top: -0.8em;
+ }
+}
+.popover-ios .popover-content {
+    width: 9vw;
+    right: 6vw !important;
+    left: auto !important;
+    bottom: 8vh !important;
+    top: auto !important;
+    height:46vh;
+    width: 11vw;
+    background-color: rgba(80, 79, 79, 0.555);
+    color: white;
+}

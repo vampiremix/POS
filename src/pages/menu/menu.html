@@ -1,0 +1,52 @@
+<!--
+  Generated template for the MenuPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>menu</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content no-bounce>
+  <ion-grid set-height no-padding>
+    <ion-row set-height>
+      <ion-col col-8>
+        <!-- <ion-row no-padding> -->
+          <ion-row>
+            <ion-header>
+              <ion-col *ngFor="let item of ['1','2','3','4','5']">
+                {{item}}
+              </ion-col>
+            </ion-header>
+          </ion-row>
+          <ion-row>
+            <ion-col col-2 *ngFor="let item of items; let i = index" no-padding>
+              <ion-card no-padding>
+                <ion-card-content>
+                  <ion-list [dragula]='"my-bag"' [dragulaModel]='i'>
+                    <button ion-item detail-none>
+                      {{item.item}}
+                    </button>
+                  </ion-list>
+                </ion-card-content>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+
+        <!-- </ion-row> -->
+      </ion-col>
+      <ion-col col-4 text-center no-padding order-color>
+        <ion-header bar-color no-padding>
+          <h4 title-color no-padding no-margin>รายการสินค้า</h4>
+        </ion-header>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
